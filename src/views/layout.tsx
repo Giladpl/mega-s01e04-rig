@@ -16,6 +16,13 @@ const css = `
   th { color: var(--mute); font-weight: normal; }
   .warn { color: var(--warn); }
   .mute { color: var(--mute); }
+  .digest-scroll { overflow-x: auto; }
+  .digest-table { min-width: 82rem; }
+  .digest-table th, .digest-table td { vertical-align: top; }
+  .digest-table tbody th, .digest-table td { overflow-wrap: anywhere; }
+  .digest-table tbody th { color: var(--fg); min-width: 8rem; }
+  .digest-error { min-width: 14rem; max-width: 24rem; white-space: pre-wrap; }
+  .digest-time { white-space: nowrap; }
 `;
 
 export function Layout(props: { title: string; lane: Lane; children: Child }) {
@@ -25,6 +32,7 @@ export function Layout(props: { title: string; lane: Lane; children: Child }) {
       <html lang="en">
         <head>
           <meta charset="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
           <title>rig · {props.title}</title>
           <style>{raw(css)}</style>
         </head>
