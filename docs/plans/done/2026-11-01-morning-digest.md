@@ -1,8 +1,9 @@
 ---
 plan: morning-digest
-status: ready
+status: done
 owner: rook
 opened: 2026-10-29
+completed: 2026-11-01
 ---
 
 # Morning digest
@@ -77,3 +78,27 @@ page again with `LANE_MARKER` unset (the banner reads "no marker set") and uploa
 link. Move this plan to `docs/plans/done/` with its issue list.
 
 Done when: the preview link no longer shows the lane marker.
+
+## Completed work
+
+- [#1 — Define the shared digest contract](https://github.com/Giladpl/mega-s01e04-rig/issues/1)
+- [#2 — Implement the run log reader](https://github.com/Giladpl/mega-s01e04-rig/issues/2)
+- [#3 — Render the digest HTML page](https://github.com/Giladpl/mega-s01e04-rig/issues/3)
+- [#4 — Expose digest rows as JSON](https://github.com/Giladpl/mega-s01e04-rig/issues/4)
+- [#5 — Link available nights from the status board](https://github.com/Giladpl/mega-s01e04-rig/issues/5)
+- [#6 — Test digest HTML and JSON routes](https://github.com/Giladpl/mega-s01e04-rig/issues/6)
+- [#7 — Publish and submit the digest review copy](https://github.com/Giladpl/mega-s01e04-rig/issues/7)
+- [#8 — Remove the public marker after review and archive the plan](https://github.com/Giladpl/mega-s01e04-rig/issues/8)
+
+## Completion evidence
+
+- `pnpm test`: 18 tests passed across 3 files; `pnpm typecheck`: passed.
+- Both fixture nights were inspected in the browser through status-board links.
+- Public review copy: https://mega-s01e04-rig-giladpl.vercel.app
+- The course explicitly confirmed that the reviewer saw the preview before cleanup.
+- The same public URL now returns the re-exported page with `LANE_MARKER` unset and the banner `no marker set`; anonymous HTTP 200 matches the prepared clean HTML byte for byte.
+- No preview HTML or lane marker is committed in this repository.
+
+## Review handoff correction
+
+Issue #7 was initially closed after sending the link. The course rejected that timing because the reviewer had not looked yet. The issue was reopened, the same link was resubmitted, and #7 was closed only after the course explicitly confirmed review. Future review tasks must stay open until that evidence arrives.
