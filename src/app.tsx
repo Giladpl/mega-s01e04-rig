@@ -5,7 +5,6 @@ import { lane } from './lane.js';
 import { readStatus } from './status.js';
 import { Layout } from './views/layout.js';
 import { StatusBoard } from './views/status.js';
-import { readNight } from './digest/read-night.js';
 import { Digest } from './views/digest.js';
 
 export function createApp(config: RigConfig = loadConfig()) {

@@ -2,6 +2,7 @@
   "name": "rig",
   "version": "0.3.0",
   "private": true,
+  "packageManager": "pnpm@11.6.0",
   "license": "MIT",
   "type": "module",
   "description": "The lane's resident service: keeps a heartbeat, serves the status board, reads the night's run log.",
